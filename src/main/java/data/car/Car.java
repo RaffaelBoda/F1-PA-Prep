@@ -1,6 +1,7 @@
 package data.car;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Car {
@@ -9,6 +10,10 @@ public class Car {
 
     public Car() {
         listOfCarParts = new ArrayList<>();
+    }
+
+    public Car(CarParts... carParts) {
+        listOfCarParts = Arrays.stream(carParts).toList();
     }
 
     public List<CarParts> getCarParts() {
